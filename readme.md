@@ -22,9 +22,9 @@ Builder's note: I started with a fresh clone of the QMK repository, dated as of 
 
 Once you've set up your QMK build environment, copy the folder "sweep2_rp2040" from this repository into directory "qmk_firmware/keyboards/ferris/".  You should have a new sub-configuration named "sweep2_rp2040" which is what you should use to build the firmware.  Once you do this, the full name of the keyboard configuration will be "ferris/sweep2_rp2040".
 
-## Using RP2040 Controllers
+## Using RP2040 Boards
 
-Pro Micro RP2040 controllers are supported natively.
+Pro Micro RP2040 boards are supported natively.
 
 From directory "qmk_firmware", run either of these commands, depending on which side is plugged in and ready to accept firmware (i.e., in bootloader mode):
 
@@ -55,13 +55,13 @@ Enter bootloader mode in one of 2 ways:
 
 If you are using other RP2040 boards that have both BOOT and RESET buttons available, then you will probably need to do the BOOT+RESET sequence:
 
-1 - Press and hold BOOT button
-2 - Press RESET button and then release it
-3 - Release the BOOT button
+* Step 1: Press and hold BOOT button
+* Step 2: Press RESET button and then release it
+* Step 3: Release the BOOT button
 
 As mentioned above and in the [Sea-Picro documentation](https://github.com/joshajohnson/sea-picro), the Sea-Picro board does not need this, since it has the improved BOOT+RESET circuit.  Simply hold down the RESET button for at least 1 second, then release it.
 
-The reason I chose the Sea-Picro is because (A) it has the improved BOOT+RESET circuit, which only uses one button; and (B) other RP2040 boards usually have the BOOT and RESET buttons installed on the top side.  Since the Ferris Sweep requires the boards to be mounted top-side down, these buttons are not accessible.  While it is possible to take out the board before reflashing it (since the board is socketed), I don't advise doing this too many times.
+The reason I chose the Sea-Picro board is because (A) it has the improved BOOT+RESET circuit, which only uses one button; and (B) other RP2040 boards usually have the BOOT and RESET buttons installed on the top side of the board.  Since the Ferris Sweep requires the boards to be mounted top-side down, these buttons would not be accessible.  While it is possible to take out the board before reflashing it (since the board is socketed), I don't advise doing this too many times.
 
 Note: If you wish to leave bootloader mode WITHOUT updating the firmware, you can either (1) tap the RESET button for less than half a second, or (2) simply un-plug and re-plug the USB-C cable.  The RP2040 will return to its last uploaded firmware on a reset or power-cycle.
 
