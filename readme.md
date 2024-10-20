@@ -20,7 +20,7 @@ Builder's note: I started with a fresh clone of the QMK repository, dated as of 
 
 ## Copying The Config
 
-Once you've set up your QMK build environment, copy the entire contents of this repository into directory "qmk_firmware/keyboards/ferris/".  You should have a new sub-configuration named "sweep2_rp2040" which is what you should use to build the firmware.
+Once you've set up your QMK build environment, copy the folder "sweep2_rp2040" from this repository into directory "qmk_firmware/keyboards/ferris/".  You should have a new sub-configuration named "sweep2_rp2040" which is what you should use to build the firmware.  Once you do this, the full name of the keyboard configuration will be "ferris/sweep2_rp2040".
 
 ## Using RP2040 Controllers
 
